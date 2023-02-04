@@ -1,0 +1,4587 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- fonts google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- css -->
+	<link rel="stylesheet" href="Asset/css/style_jadwal_dokter_rsud.css">
+	<link rel="stylesheet" href="Asset/css/responsive_jadwal_dokter_rsud.css">
+
+	<!-- favicon -->
+	<link rel="icon" href="Asset/img/favicon-rsud-aa-pku 1.png" type="image/x-icon">
+	<title>Jadwal Dokter - Rumah Sakit Umum Daerah Arifin Achmad</title>
+</head>
+
+<body>
+	<!--  Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
+		<div class="container">
+			<a class="navbar-brand" href="http://rsudarifinachmad.riau.go.id/">
+				<img src="Asset/img/favicon-rsud-aa-pku 1.png" alt="" width="30" height="30"
+					class="d-inline-block align-text-top me-2">
+				RSUD ARIFIN ACHMAD
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+					<!-- Tentang Kami -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Tentang Kami
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/about/">Sambutan
+									Direktur</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/tentang-rsud-arifin-achmad/">Profil
+									RSUD
+									Arifin Achmad</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/visi-misi/">VISI
+									MISI</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/tupoksi-dinas/">Tupoksi Dinas</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/struktur-organisasi/">Struktur
+									Organisasi</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/sumber-daya-manusia/">Sumber Daya
+									Manusia</a></li>
+						</ul>
+					</li>
+
+					<!-- Dokter -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Dokter
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/dokter-rsud/">Profil
+									Dokter</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#jadwal">Jadwal Dokter</a></li>
+						</ul>
+					</li>
+
+					<!-- Pelayanan -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Pelayanan
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<!-- Layanan Rawat Jalan -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Layanan Rawat Jalan
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/poli/">Poli</a></li>
+								</ul>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Layanan Rawat Inap -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://rsudarifinachmad.riau.go.id/layanan-rawat-inap/">Layanan Rawat Inap
+								</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Layanan Penunjang -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://rsudarifinachmad.riau.go.id/layanan-penunjang/">Layanan Penunjang
+								</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Layanan Unggulan -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Layanan Unggulan
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/jantung-terpadu/">Jantung
+											Terpadu</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="http://rsudy\
+										finachmad.riau.go.id/kanker-terpadu/">Kanker Terpadu</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/trauma-centre/">Trauma
+											Centre</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Layanan Inovatif -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://rsudarifinachmad.riau.go.id/layanan-inovatif/">Layanan Inovatif
+								</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Layanan MCU Online -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://registrasi.rsudarifinachmad.riau.go.id/">Layanan MCU Online </a>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Info Publik -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Info Publik
+						</a>
+
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<!-- Gratifikasi -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Gratifikasi
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/tentang-gratifikasi/">Tentang
+											Gratifikasi</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="http://wbs.rsudarifinachmad.riau.go.id/">lapor
+											Gratifikasi</a></li>
+								</ul>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Info Bed Management -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://rsudarifinachmad.riau.go.id/info-bedman/">Info Bed
+									Management</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Maklumat Pelayanan -->
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page"
+									href="http://rsudarifinachmad.riau.go.id/maklumat-pelayanan-2/">Maklumat
+									Pelayanan</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Standar Pelayanan -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Standar Pelayanan
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="#">Tahun 2019</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="#">Tahun 2020</a></li>
+								</ul>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+
+							<!-- Komite Mutu -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Komite Mutu
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/komite-mutu/">2019</a>
+									</li>
+									<li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item"
+											href="http://rsudarifinachmad.riau.go.id/capaian-indikator-mutu-nasional-wajib-tahun-2020/">2020</a>
+									</li>
+									<li>
+								</ul>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+							<!-- Edukasi -->
+							<li class="nav-item dropend">
+								<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Edukasi
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/ppi/">PPI
+											(Pencegahan dan Pengendalian Infeksi)</a></li>
+									<li>
+								</ul>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+
+
+					</li>
+
+					<!-- RENJA RAPBD -->
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page"
+							href="http://rsudarifinachmad.riau.go.id/renja-rapbd-2020/">RENJA RAPBD</a>
+					</li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+
+					<!-- Alur Pasien -->
+					<li class="nav-item dropend">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Alur Pasien
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/alur-pasien-rawat-jalan/">Alur
+									Pasien Rawat Jalan</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/alur-pasien-igd/">Alur
+									Pasien
+									IGD</a>
+							</li>
+						</ul>
+
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+
+					<!-- Data Pelatihan -->
+					<li class="nav-item dropend">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Data Pelatihan
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/pelatihan-2018/">2018</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="http://rsudarifinachmad.riau.go.id/pelatihan-2019/">2019</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+
+					<!-- Download Info Publik -->
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page"
+							href="http://rsudarifinachmad.riau.go.id/info-publik/">Download Info
+							Publik</a>
+					</li>
+				</ul>
+				</li>
+
+				<!-- Berita -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Berita
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/galeri/">Galeri</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- ZI -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						ZI
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="http://rsudarifinachmad.riau.go.id/dokter-rsud/">Profil
+								Dokter</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Jadwal Dokter</a></li>
+					</ul>
+				</li>
+
+				<!-- Hubungi Kami -->
+				<li class="nav-item  me-2">
+					<a class="nav-link" aria-current="page" href="http://rsudarifinachmad.riau.go.id/contact/">Hubungi
+						Kami</a>
+				</li>
+			</div>
+		</div>
+		</div>
+	</nav>
+	<!-- end navbar -->
+
+	<!-- hero section -->
+	<section id="hero">
+		<div class="container h-100">
+			<div class="row h-50 my-auto">
+				<div class="col-md-6 hero-tagline">
+					<h1>Membantu Temukan
+						Jadwal Dokter Anda.</h1>
+					<p><span class="fw-bold">Lihat jadwal dokter</span> RSUD ARIFIN ACHMAD dari berbagai macam
+						spesialisasi dan polikliknik untuk kebutuhan medis anda.</p>
+
+					<button class="button-lg-primary me-2"><a href="#jadwal">Lihat Jadwal Dokter Hari
+							Ini</a></button>
+					<a>
+						<img src="Asset/img/Vector_arrow.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end hero -->
+
+	<!-- Jadwal -->
+	<br><br><br><br>
+	<section id="jadwal ">
+		<div class="container">
+			<div class="row">
+				<div id="jadwal">
+					<div class="col-12 text-center">
+						<h2>Jadwal Dokter</h2>
+						<span class="sub-title">Silahkan lihat jadwal dokter spesialis
+							anda</span>
+					</div>
+				</div>
+			</div>
+
+			<br><br>
+
+			<!-- Acordion -->
+			<div class="accordion accordion-flush" id="accordionFlushExample">
+				<div class="accordion-item">
+					<!-- anak -->
+					<h2 class="accordion-header" id="flush-heading1">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false"
+							aria-controls="flush-collapse1">
+							SPESIALIS ANAK
+						</button>
+					</h2>
+					<div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-riza-yefri-sp-a">dr.
+													Riza Yefri Sp.A</a>
+											</td>
+											<td>Umum/ Infeksi Tropis Anak</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. dr. Dian Dwi Sary Mustika
+													Febriany,
+													Sp.A (K)</a>
+											</td>
+											<td>Umum/ Tumbuh Kembang</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-riza-iriani-nasution-sp-a">Riza
+													Iriani, SpA</a>
+											</td>
+											<td>Umum/ Respirologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Wella Yurisa, SpA </a>
+											</td>
+											<td>Endokrin</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anak/#gallery-details-dr-deddy-satriya-putra-sp-a-k">dr.
+													Deddy Satriya Putra, Sp.A(K)</a>
+											</td>
+											<td>Umum/ Gastroentero Hepatologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-muhammad-nur-sp-a">dr.
+													Muhammad Nur, SpA</a>
+											</td>
+											<td>Umum/ Nefrologi Anak</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-ismet-sp-a">dr.
+													Ismet, Sp.A</a>
+											</td>
+											<td>Umum/ Neurologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-nazardi-oyong-sp-a">dr.
+													Nazardi Oyong,SpA</a>
+											</td>
+											<td>Umum/ Perinatologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-zulfikri-sp-a">dr.
+													Zulfikri, Sp.A</a>
+											</td>
+											<td>Umum/ Perinatologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. M. Robi, Sp.A, M. Biomed</a>
+											</td>
+											<td>Umum/ Perinatologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<!-- ga ada di app & web -->
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Rince, SpA</a>
+											</td>
+											<td>Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Citra Cesilia, Sp.A</a>
+											</td>
+											<td>Spesalis Anak</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anak/#gallery-details-dr-mislina-munir-m-kedped-sp-a">dr.
+													Mislina Munir, M.Ked(Ped), Sp.A</a>
+											</td>
+											<td>Spesalis Anak</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anak/#gallery-details-dr-cece-alfalah-sp-a-k-m-biomed">dr.
+													Cece Alfalah, Sp.A (K). M.Biomed</a>
+											</td>
+											<td>Sub Spesalis Anak</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anak/#gallery-details-dr-hotber-edwin-rolan-pasaribusp-a-m-biomed">dr.
+													Hotber Edwin Rolan Pasaribu,Sp.A. M.Biomed</a>
+											</td>
+											<td>Sub Spesalis Anak</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anak/#gallery-details-dr-dr-dewi-a-wisnumurti-sp-ak-ibclc">DR.
+													dr. Dewi A Wisnumurti, Sp.A(K), IBCLC</a>
+											</td>
+											<td>Sub Spesalis Anak</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end anak -->
+
+					<!-- jantung -->
+					<h2 class="accordion-header" id="flush-heading2">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false"
+							aria-controls="flush-collapse2">
+							SPESIALIS JANTUNG
+						</button>
+					</h2>
+					<div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-jantung/#gallery-details-dr-citra-prima-sari-sp-jp-fiha">dr.
+													Citra Prima Sari, Sp.JP-FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Sari Harahap.,M.Ked (PD) SpPD </a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Dewi Shandi Laila, M.Ked (Ped),
+													SpA(K)</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-jantung/#gallery-details-dr-irwan-sp-jpk-fiha">dr.
+													Irwan, SpJP ( K ) - FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-jantung/#gallery-details-dr-juwanto-sp-pd-kkv-finasim">dr.
+													Juwanto, SpPD. KKV - FINASIM</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Hery Diansyah Putra, M.Ked-SpJP</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-jantung/#gallery-details-dr-dyah-siswanti-e-sp-jp-k-fiha">dr.
+													Dyah Siswanti E, SpJP ( K ) -FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-jantung/#gallery-details-dr-lia-valentina-astari-sp-jp-fiha">dr.
+													Lia Valentina Astari, Sp.JP- FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-jantung/#gallery-details-dr-rosmaliana-sp-jp-fiha">dr.
+													Rosmaliana, SpJP- FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Rinelia Minaswary, SpJK (K)-FIHA</a>
+											</td>
+											<td>Sp.Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end jantung -->
+
+					<!-- start gagal jantung -->
+					<h2 class="accordion-header" id="flush-heading43">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse43" aria-expanded="false"
+							aria-controls="flush-collapse43">
+							SPESIALIS POLI GAGAL JANTUNG
+						</button>
+					</h2>
+					<div id="flush-collapse43" class="accordion-collapse collapse" aria-labelledby="flush-heading43"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Lia Velentina Astari,Sp.JP-FIHA</a>
+											</td>
+											<td>Sp.Gagal Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Juwanto,Sp.PD KKV</a>
+											</td>
+											<td>Sp.Gagal Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Dyah Siswanti,Sp.JP</a>
+											</td>
+											<td>Sp.Gagal Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Rosmaliana,Sp.JP</a>
+											</td>
+											<td>Sp.Gagal Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Citra Prima Sari,Sp.JP-FIHA</a>
+											</td>
+											<td>Sp.Gagal Jantung</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end gagal jantung -->
+
+					<!-- kejiwaan-->
+					<h2 class="accordion-header" id="flush-heading3">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false"
+							aria-controls="flush-collapse3">
+							SPESIALIS KEJIWAAN
+						</button>
+					</h2>
+					<div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kejiwaan/#gallery-details-dr-rina-amtarinasp-kj/">dr.
+													Rina Amtarina, Sp.Kj</a>
+											</td>
+											<td>Sp.Kejiwaan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end kejiwaan -->
+
+					<!-- anasthesi-->
+					<h2 class="accordion-header" id="flush-heading4">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
+							aria-controls="flush-collapse4">
+							SPESIALIS ANASTHESI
+						</button>
+					</h2>
+					<div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>TANGGAL PRAKTEK</th>
+										<th>Keterangan</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-sony-sp-an-m-kes">dr.
+													Sony, SpAN</a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 7, 10, 31</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-dino-irawan-sp-an">dr.
+													Dino Irawan, SpAN </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 4, 20, 28</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-kurniaji-sp-an-2">dr.
+													Kurniaji, SpAN </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 12, 13, 14, 15, 16, 7, 18</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-nopian-hidayat-sp-an">dr.
+													Nopian Hidayat, SpAN </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 6, 13, 27</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-yustisa-sofirina-sp-an">dr.Yustisa
+													Sofirina H, SpAN </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 14, 19, 26</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anestesi/#gallery-details-dr-novita-anggraeni-sp-ankic-m-kes">dr.
+													Novita Anggraeni, SpAN, KIC </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 3, 21, 25</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-anestesi/#gallery-details-dr-vera-muharrami-m-ked-an-sp-an">dr.
+													Addi Saputra, SpAN </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 17, 30</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/sub-spesialis-anestesi/#gallery-details-dr-vera-muharrami-m-kedansp-an-k">dr.
+													Vera Muharrami, SpAN (K) </a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 5, 11, 17</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Pratama Ananda, M.Ked.Klin, SpAN</a>
+											</td>
+											<td>Sp. Anasthesi</td>
+											<td>Tanggal 7, 14, 21, 28</td>
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end anasthesi -->
+
+					<!-- Bedah Umum-->
+					<h2 class="accordion-header" id="flush-heading5">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false"
+							aria-controls="flush-collapse5">
+							SPESIALIS BEDAH UMUM
+						</button>
+					</h2>
+					<div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-umum/#gallery-details-dr-dardis-sp-b">dr.
+													Dardis, SpB</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-umum/#gallery-details-dr-taufik-hidayat-sp-b">dr.
+													Taufik Hidayat, SpB</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-digestif/#gallery-details-dr-suindra-spb-kbd">dr.
+													Suindra, SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Suindra, SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Aulia Janer, Sp.B</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Welli Zulfikar, SpB (K) KL</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Kisman Harahap, Sp.B</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Agus Supriadi, SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Eddy Ahmad Syahputra,SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Tommy Kuswara,SpB SubBVE</a>
+											</td>
+											<td>Sp.Bedah Umum</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah umum -->
+
+					<!-- bedah digestif-->
+					<h2 class="accordion-header" id="flush-heading6">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false"
+							aria-controls="flush-collapse6">
+							SPESIALIS BEDAH DIGESTIF
+						</button>
+					</h2>
+					<div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Eddy Ahmad Syahputra,SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Digestif</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Suindra, SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Digestif</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-digestif/#gallery-details-dr-agus-supriadisp-b-kbd">dr.
+													Agus Supriadi, SpB-KBD</a>
+											</td>
+											<td>Sp.Bedah Digestif</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Bayhaqi, SpB-KBD (K). FINACS.
+													FICS</a>
+											</td>
+											<td>Sp.Bedah Digestif</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah digestif -->
+
+					<!-- bedah kepala leher-->
+					<h2 class="accordion-header" id="flush-heading7">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false"
+							aria-controls="flush-collapse7">
+							SPESIALIS BEDAH KEPALA LEHER
+						</button>
+					</h2>
+					<div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-kepala-leher/#gallery-details-dr-welli-zulfikar-sp-b-k-kl">dr.
+													Welli Zulfikar, SpB
+													(K) KL</a>
+											</td>
+											<td>Sp.Bedah Kepala Leher</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah kepala leher -->
+
+					<!-- start bedah onkologi -->
+					<h2 class="accordion-header" id="flush-heading29">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse29" aria-expanded="false"
+							aria-controls="flush-collapse29">
+							SPESIALIS BEDAH ONKOLOGI
+						</button>
+					</h2>
+					<div id="flush-collapse29" class="accordion-collapse collapse" aria-labelledby="flush-heading29"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-onkologi/#gallery-details-dr-dr-effif-syofra-tripriadi-spbkonk">DR.
+													dr. Effif Syofra Tripriadi, Sp.B(K)Onk</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-onkologi/#gallery-details-dr-elfadri-abdah-spbkonk-m-kes">Dr.
+													Elfadri Abdah, SpB(K)Onk M. Kes</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-onkologi/#gallery-details-dr-fathar-usman-bunawir-spb-k-onk">dr.
+													Fathar Usman Bunawir , SpB (K) Onk</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.
+													Fathar Usman Bunawir , SpB (K) Onk</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Muhammad,Sp.B</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Salamullah,M.Ked(Surg),Sp.B(K)Onk </a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Sinta Chaira Maulanisa, Sp.B(K)Onk
+												</a>
+											</td>
+											<td>Sp.Bedah Onkologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah onkologi -->
+
+					<!-- start bedah plastik-->
+					<h2 class="accordion-header" id="flush-heading8">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false"
+							aria-controls="flush-collapse8">
+							SPESIALIS BEDAH PLASTIK
+						</button>
+					</h2>
+					<div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-bedah-plastik/#gallery-details-dr-kuswan-ambar-pamungkas-spbp-re">dr.
+													Kuswan A pamungkas. SpBE-RE</a>
+											</td>
+											<td>Sp.Bedah Plastik</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-bedah-plastik/#gallery-details-dr-mulyadi-spbp-re">dr.
+													Mulyadi, Sp.BP-RE</a>
+											</td>
+											<td>Sp.Bedah Plastik</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-bedah-plastik/#gallery-details-dr-fakhrul-hendra-spbp-re">dr.
+													Fakhrul Hendra, SpBP-RE</a>
+											</td>
+											<td>Sp.Bedah Plastik</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah plastik -->
+
+					<!-- bedah anak-->
+					<h2 class="accordion-header" id="flush-heading9">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false"
+							aria-controls="flush-collapse9">
+							SPESIALIS BEDAH ANAK
+						</button>
+					</h2>
+					<div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-anak/#gallery-details-dr-ismar-spb-spba">dr.
+													Ismar, SpB.SpBA</a>
+											</td>
+											<td>Sp.Bedah Anak</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-anak/#gallery-details-dr-dr-tubagus-odih-rhomdani-wahid-spba">Dr.dr.
+													Tubagus Odih R
+													W, MKM, SpBA(K)</a>
+											</td>
+											<td>Sp.Bedah Anak</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah anak -->
+
+					<!-- bedah thorax kardiovaskuler+vaskuler-->
+					<h2 class="accordion-header" id="flush-heading10">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false"
+							aria-controls="flush-collapse10">
+							SPESIALIS BEDAH THORAX KARDIOVASKULER + VASKULER
+						</button>
+					</h2>
+					<div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-bedah-toraks-kardiovaskuler/#gallery-details-dr-hariadi-hatta-sp-b-tkv">dr.
+													Hariadi Hatta, Sp.BTKV</a>
+											</td>
+											<td>Sp.Bedah Thorak Kadio Vaskuler</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Brilliant, Sp.BTKV</a>
+											</td>
+											<td>Sp.Bedah Thorak Kadio Vaskuler</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah thorax kardiovaskuler + vaskuler -->
+
+					<!-- Bedah vaskuler -->
+					<h2 class="accordion-header" id="flush-heading30">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse30" aria-expanded="false"
+							aria-controls="flush-collapse30">
+							SPESIALIS BEDAH VASKULER
+						</button>
+					</h2>
+					<div id="flush-collapse30" class="accordion-collapse collapse" aria-labelledby="flush-heading30"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-bedah-toraks-kardiovaskuler/#gallery-details-dr-hariadi-hatta-sp-b-tkv">dr.
+													Hariadi Hatta, Sp.BTKV</a>
+											</td>
+											<td>Sp.Bedah Thorak Kardio Vaskuler</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Brilliant, Sp.BTKV</a>
+											</td>
+											<td>Sp.Bedah Thorak Kardio Vaskuler</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Ramzi Asrial,Sp.B(K)V</a>
+											</td>
+											<td>Sp.Bedah Vaskuler</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<!-- BEDAH ORTHOPEDI-->
+					<h2 class="accordion-header" id="flush-heading11">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false"
+							aria-controls="flush-collapse11">
+							SPESIALIS BEDAH ORTHOPEDI
+						</button>
+					</h2>
+					<div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Syafruddin H, Dp OT (K) Spine </a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-orthopedi/#gallery-details-dr-eko-setiawan-sp-ot">dr.
+													Eko Setiawan, SpOT</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-orthopedi/#gallery-details-dr-chairuddin-lubis-spot">dr.
+													Chairuddin Lubis, Sp.OT (K) Spine</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Syafruddin H, Dp OT (K) Spine </a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Romy , Sp.OT (K)
+													Sport.,M.Kes.,AIFO</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Muhammad Ikhsan , Sp.OT (K) Hip &
+													Knee</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Arnadi, SpOT</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-orthopedi/#gallery-details-dr-rangga-ardianto-prasetyo-sp-ot-b-med-sc">dr.
+													Rangga Ardianto, Sp.OT.B.Med.SC</a>
+											</td>
+											<td>Sp.Bedah Orthopedi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end orthopedi -->
+
+					<!-- BEDAH UROLOGI-->
+					<h2 class="accordion-header" id="flush-heading12">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false"
+							aria-controls="flush-collapse12">
+							SPESIALIS BEDAH UROLOGI
+						</button>
+					</h2>
+					<div id="flush-collapse12" class="accordion-collapse collapse" aria-labelledby="flush-heading12"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">Dr. dr. Zuhirman, Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-urologi/#gallery-details-dr-dr-zuhirman-sp-u">Dr.
+													dr. Zuhirman, Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-urologi/#gallery-details-dr-indra-jaya-sp-u">dr.
+													Indra Jaya, SpU</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-urologi/#gallery-details-dr-fakhrul-hendra-sp-bp-re">Dr.
+													dr. Afdal, SpU</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-urologi/#gallery-details-dr-muhammad-adan-yashar-sp-u">dr.
+													Muhammad Adan Yashar, SpU</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-urologi/#gallery-details-dr-joko-pitoyo-sp-u">dr
+													joko pitoyo.SpU</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah urologi -->
+
+					<!-- BEDAH SARAF-->
+					<h2 class="accordion-header" id="flush-heading13">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false"
+							aria-controls="flush-collapse13">
+							SPESIALIS BEDAH SARAF
+						</button>
+					</h2>
+					<div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-syaraf/#gallery-details-dr-andrea-valentino-spbs">dr.
+													Andrea Valentino, Sp.BS</a>
+											</td>
+											<td>Sp.Bedah Syaraf</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Tondi Maspian Tjili, SpBS. M.Kes</a>
+											</td>
+											<td>Sp.Bedah Syaraf</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-syaraf/#gallery-details-dr-antar-hasidi-sp-bs">dr.
+													Anthar Hadisi, Sp.BS</a>
+											</td>
+											<td>Sp.Bedah Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-syaraf/#gallery-details-dr-gatot-aji-prihartomo-spbs-m-kes">dr.
+													Gatot Aji Prihartomo, Sp.BS</a>
+											</td>
+											<td>Sp.Bedah Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-bedah-syaraf/#gallery-details-dr-ade-wirdayantosp-bs">dr.
+													Ade Wirdayanto, Sp.BS</a>
+											</td>
+											<td>Sp.Bedah Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah syaraf -->
+
+					<!-- bedah mulut-->
+					<h2 class="accordion-header" id="flush-heading18">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse18" aria-expanded="false"
+							aria-controls="flush-collapse18">
+							SPESIALIS BEDAH MULUT
+						</button>
+					</h2>
+					<div id="flush-collapse18" class="accordion-collapse collapse" aria-labelledby="flush-heading18"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">drg. Agung Tri Prakoso, SpBM</a>
+											</td>
+											<td>Sp.Bedah Mulut</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end bedah mulut -->
+
+					<!-- PENYAKIT DALAM-->
+					<h2 class="accordion-header" id="flush-heading14">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false"
+							aria-controls="flush-collapse14">
+							SPESIALIS PENYAKIT DALAM
+						</button>
+					</h2>
+					<div id="flush-collapse14" class="accordion-collapse collapse" aria-labelledby="flush-heading14"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-asrizal-sp-pd">dr.
+													Asrizal, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-ligat-pribadi-sp-pd-finasim">dr.
+													Ligat Pribadi Sembiring, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-harini-oktadiana-sp-pd">dr.
+													Harini Oktadiana, SpPD</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Asrizal, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Sari Harahap.,M.Ked (PD) SpPD </a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Rayendra, SpPD-KGH.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-anwar-bet-sp-pd">dr.
+													Anwar BET, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Asrizal, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-heri-krisnata-ginting-sp-pd">dr.
+													Heri Krisnata Ginting, Sp.PD</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Husna Fauziah, SpPDM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-m-firdaus-j-karimi-sp-pd">dr.
+													Firdaus J.Karimi, SpPD</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="">dr. Dasril Efendi sPPD. KGEH</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-alex-simson-barus-sp-pd-finasim">dr.
+													Alex Simson Barus, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-dani-rosdiana-sp-pd">dr.
+													Dani Rosdiana, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-dani-rosdiana-sp-pd">dr.
+													Dani Rosdiana, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 10.30</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-hendra-saputra-sp-pd">dr.
+													Hendra Asputra, SpPD</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-penyakit-dalam/#gallery-details-dr-merlinda-veronica-sp-pd">dr.
+													R. Merlinda Veronica, M.Ked (PD), SpPD</a>
+											</td>
+											<td>Sp.Penyakit Dalam</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end penyakit dalam -->
+
+					<!-- mata-->
+					<h2 class="accordion-header" id="flush-heading15">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse15" aria-expanded="false"
+							aria-controls="flush-collapse15">
+							SPESIALIS MATA
+						</button>
+					</h2>
+					<div id="flush-collapse15" class="accordion-collapse collapse" aria-labelledby="flush-heading15"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-efhandi-nukman-sp-m">dr.
+													Efhandi Nukman, SpM</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-dr-nofri-suriadi-sp-m">DR.dr.Nofri
+													Suriadi,SpM</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-bagus-sidhartosp-m">dr
+													Bagus Sidharto,SpM</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-r-handoko-pratomo-sp-m">dr
+													R. Handoko Pratomo SpM</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-yulia-wardany-sp-m">dr.
+													Yulia Wardany, Sp.M</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-mata/#gallery-details-dr-isfyanto-sp-m">dr.
+													Isfyanto, Sp.M</a>
+											</td>
+											<td>Sp.Mata</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end mata -->
+
+					<!-- syaraf-->
+					<h2 class="accordion-header" id="flush-heading16">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse16" aria-expanded="false"
+							aria-controls="flush-collapse16">
+							SPESIALIS SYARAF
+						</button>
+					</h2>
+					<div id="flush-collapse16" class="accordion-collapse collapse" aria-labelledby="flush-heading16"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Isfyanto, Sp.M</a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-saraf/#gallery-details-dr-riki-sukiandra-sp-s">dr.
+													Riki Sukiandra, SpS</a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-saraf/#gallery-details-dr-enny-lestari-sp-s-m-biomed">dr.
+													Enni Lestari, SpS</a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Daril A rasyid, SpS</a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-saraf/#gallery-details-dr-yossi-maryati-sp-s-m-biomed">dr.
+													Yossi Maryanti, SpS</a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-saraf/#gallery-details-dr-sucipto-sp-s">dr.
+													Sucipto, Sp.S </a>
+											</td>
+											<td>Sp.Syaraf</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- syaraf -->
+
+					<!-- paru-->
+					<h2 class="accordion-header" id="flush-heading17">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse17" aria-expanded="false"
+							aria-controls="flush-collapse17">
+							SPESIALIS PARU
+						</button>
+					</h2>
+					<div id="flush-collapse17" class="accordion-collapse collapse" aria-labelledby="flush-heading17"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-paru/#gallery-details-dr-arlina-gusti-sp-p">dr.
+													Arlina Gusti, SpP </a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-paru/#gallery-details-dr-indi-esha-m-si-sp-p">dr.
+													Indi Esha, M.Si, Sp.P </a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-spesialis-paru/#gallery-details-dr-zarfiardy-aksa-fauzi-sp-p-k">dr.
+													Zarfiardy AF, SpP (K) </a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-paru/#gallery-details-dr-sri-indah-indriani-sp-p">dr.
+													Sri Indah Indriani, Sp.P</a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-spesialis-paru/#gallery-details-dr-adrianison-sp-p-k">dr.
+													Adrianison, SpP (K)</a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-spesialis-paru/#gallery-details-dr-indra-yovi-sp-p-k">dr.
+													Indra Yovi, Sp.P (K)</a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Ananda Febriani Aulia, Sp.P</a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-spesialis-paru/#gallery-details-dr-sri-melati-munir-sp-pk">dr.
+													Sri Melati Munir, SpP (K)</a>
+											</td>
+											<td>Sp.Paru</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end paru -->
+
+					<!-- PROSTHODONTHIE -->
+					<h2 class="accordion-header" id="flush-heading19">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse19" aria-expanded="false"
+							aria-controls="flush-collapse19">
+							SPESIALIS PROSTHODONTHIE
+						</button>
+					</h2>
+					<div id="flush-collapse19" class="accordion-collapse collapse" aria-labelledby="flush-heading19"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">DR. drg. Elita Rafni, Sp. Prostho</a>
+											</td>
+											<td>Sp.Prosthodontie</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end prosthodontie -->
+
+					<!-- KONSERVASI GIGI-->
+					<h2 class="accordion-header" id="flush-heading20">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false"
+							aria-controls="flush-collapse20">
+							SPESIALIS KONSERVASI GIGI / ENDONSI
+						</button>
+					</h2>
+					<div id="flush-collapse20" class="accordion-collapse collapse" aria-labelledby="flush-heading20"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-erni-arum-widya-yanti">drg
+													erni Arum widya
+													yanti spKG</a>
+											</td>
+											<td>Sp.Konservasi Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end KONSERVASI GIGI -->
+
+					<!-- KONSERVASI RADIOLOGI GIGI -->
+					<h2 class="accordion-header" id="flush-heading21">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false"
+							aria-controls="flush-collapse21">
+							SPESIALIS KONSERVASI RADIOLOGI GIGI
+						</button>
+					</h2>
+					<div id="flush-collapse21" class="accordion-collapse collapse" aria-labelledby="flush-heading21"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-spesialis/#gallery-details-drg-fitri-angraini-nasution">drg.
+													Fitri Angraini, SpRKG</a>
+											</td>
+											<td>Sp.Konservasi Radiologi Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end KONSERVASI RADIOLOGI GIGI -->
+
+					<!-- ORTHODONTHIE-->
+					<h2 class="accordion-header" id="flush-heading22">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse22" aria-expanded="false"
+							aria-controls="flush-collapse22">
+							SPESIALIS ORTHODONTHIE
+						</button>
+					</h2>
+					<div id="flush-collapse22" class="accordion-collapse collapse" aria-labelledby="flush-heading22"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-spesialis/#gallery-details-drg-petry-testya">drg.
+													Poetry Testya,
+													Sp.Ort</a>
+											</td>
+											<td>Sp.Orthodonthie</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end ORTHODONTHIE-->
+
+					<!-- GIGI UMUM-->
+					<h2 class="accordion-header" id="flush-heading23">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse23" aria-expanded="false"
+							aria-controls="flush-collapse23">
+							SPESIALIS GIGI UMUM
+						</button>
+					</h2>
+					<div id="flush-collapse23" class="accordion-collapse collapse" aria-labelledby="flush-heading23"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-burhanuddin-mm">drg.Burhanuddin,
+													MM</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-nora-indriasari-m-kes">drg.
+													Nora Indria Sari</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-rizki-yuli-amanda">drg.
+													Rizki Yuli Amanda</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-amri-ul-ikhwan">drg.
+													Amri Al Ikhwan</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-rani-ramayani">drg.
+													Rani Rahmayani</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">drg. Carlis</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-alamsyah-piliang">drg.
+													Alamsyah Piliang</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-darmayanti">drg.
+													Damayanti</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-rina-aryati-sitompul">drg.
+													Rina Ariyati</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-sumiyati">drg.
+													Sumiyati</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-budi-yanto">drg.
+													Budi Yanto</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-gigi-umum/#gallery-details-drg-elpi-sumiarni">drg.
+													Elpi Sumarni</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">drg.Gusmiati</a>
+											</td>
+											<td>Sp.Gigi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end gigi umum -->
+
+					<!-- START THT-->
+					<h2 class="accordion-header" id="flush-heading24">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse24" aria-expanded="false"
+							aria-controls="flush-collapse24">
+							SPESIALIS THT
+						</button>
+					</h2>
+					<div id="flush-collapse24" class="accordion-collapse collapse" aria-labelledby="flush-heading24"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-yolazenia-m-biomed-sp-t-h-t-k-l">dr.
+													Yolazenia M. Biomed, Sp.THT- KL</a>
+											</td>
+											<td>Sp.THT</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-loriana-ulfa-sp-tht-kl">dr.
+													Loriana Ulfa, Sp.THT-KL</a>
+											</td>
+											<td>Sp.THT</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-harianto-sp-t-h-t-k-l">dr.
+													Harianto, Sp.THTBKL-Subsp. Onk (K</a>
+											</td>
+											<td>Sp.Onkologi THT</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-asmawati-adnan-sp-t-h-t-k-l">dr.
+													Asmawati Adnan, Sp.THT-KL</a>
+											</td>
+											<td>Sp.THT</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-ariman-syukri-sp-t-h-t-k-l">dr.
+													Ariman Syukri, Sp.THT -KL </a>
+											</td>
+											<td>Sp.THT</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-tht/#gallery-details-dr-ibrahim-irsan-nasutionsp-tht-klk">dr.
+													Ibrahim Irsan Nst, Sp.THTBKL-Subsp.
+													Onk (K)</a>
+											</td>
+											<td>Sp.Onkologi THT</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<!-- KANDUNGAN-->
+					<h2 class="accordion-header" id="flush-heading25">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse25" aria-expanded="false"
+							aria-controls="flush-collapse25">
+							SPESIALIS KANDUNGAN
+						</button>
+					</h2>
+					<div id="flush-collapse25" class="accordion-collapse collapse" aria-labelledby="flush-heading25"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-noviardi-sp-og-k">dr.
+													Noviardy, SpOG (K) ObSos</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-eddy-r-panggribuan-sp-ogk">dr.
+													Eddy R. Pangaribuan, SpOG (K)</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-sri-wahyu-maryuni-sp-ogk">dr.
+													Sri Wahyuni M, ,SpOG (K) Urogin </a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/spesialis-kandungan/#gallery-details-dr-ruza-p-rustam-sp-og">dr.
+													Ruza P. Rustam, SpOG </a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-dr-donel-s-sp-og-k">DR.
+													dr. Donel, SpOG (K) FM</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-edy-fakhrizal-sp-og-k">dr.
+													Edy Fakhrizal,SpOG (K) Urogin </a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Wiwin Suhandri, SpOG</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Nicko Pisceski K.S, SpOG (K) FER</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Zulmaeta, SpOG (K) FM</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-imelda-e-baktiana-m-si-med-sp-ogk">dr.
+													Imelda E.B.Hutagaol, SpOG (K) Fer
+												</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-ari-hidayat-sp-og-k">dr.
+													Imelda E.B.Hutagaol, SpOG (K) Fer
+												</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-jon-madi-sp-og-k">dr.
+													Jon Madi, Sp.OG (K)
+												</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/konsultan-kandungan/#gallery-details-dr-muhammad-yusuf-sp-og-k">dr.
+													Muhammad Yusuf, Sp.OG (K)
+												</a>
+											</td>
+											<td>Sp.Kandungan</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end KANDUNGAN-->
+
+					<!-- START KULIT DAN KELAMIN -->
+					<h2 class="accordion-header" id="flush-heading26">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse26" aria-expanded="false"
+							aria-controls="flush-collapse26">
+							SPESIALIS KULIT DAN KELAMIN
+						</button>
+					</h2>
+					<div id="flush-collapse26" class="accordion-collapse collapse" aria-labelledby="flush-heading26"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-dr-endang-herliyanti-d-sp-kk-finsdv-faadv">Dr.dr.
+													Endang HD,Sp.KK,FINSDV,FAADV</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-r-nurhayati-sp-kk">dr.
+													R. Nurhayati, M.Ked (DV), Sp.DV</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-istiana-fiatiningsih-sp-kk">dr.
+													Istiana Fiatiningsih, SpKK</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-yuni-eka-anggraeni-m-med-edm-sc-sp-kk">dr.
+													Yuni Eka Anggraini,M.Med.Ed.M.Sc,Sp.KK</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-t-sy-dessi-indah-sari-as-sp-kk">ddr.
+													T. Sy. Desi Indah S.A, SpKK</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter"
+													href="http://rsudarifinachmad.riau.go.id/dokter-spesialis-kulit-dan-kelamin/#gallery-details-dr-sukasihati-sp-kk-finsdv">dr.
+													Sukasihati, Sp.KK, FINSDV</a>
+											</td>
+											<td>Sp.Kulit Kelamin</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end kulit dan kelamin -->
+
+					<!-- START UPK/VCT -->
+					<h2 class="accordion-header" id="flush-heading27">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse27" aria-expanded="false"
+							aria-controls="flush-collapse27">
+							SPESIALIS UNIT PELAYANAN KHUSUS (VCT)
+						</button>
+					</h2>
+					<div id="flush-collapse27" class="accordion-collapse collapse" aria-labelledby="flush-heading27"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Silvia Indriani</a>
+											</td>
+											<td>Sp.Unit Pelayanan Khusus (VCT)</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Yezi Silvia</a>
+											</td>
+											<td>Sp.Unit Pelayanan Khusus (VCT)</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end UPK/VCT -->
+
+					<!-- START TB.MDR -->
+					<h2 class="accordion-header" id="flush-heading28">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse28" aria-expanded="false"
+							aria-controls="flush-collapse28">
+							SPESIALIS TB.MDR
+						</button>
+					</h2>
+					<div id="flush-collapse28" class="accordion-collapse collapse" aria-labelledby="flush-heading28"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>TANGGAL PRAKTEK</th>
+										<th>Keterangan</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Indra Yovi, Sp.P (K)</a>
+											</td>
+											<td>Sp.TB.MDR</td>
+											<td>Tanggal 1 s/d 15
+											<td>*Tanggal praktek dokter berlaku untuk bulan ini</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr. Dani Rosdiana, SpPD.FINASIM</a>
+											</td>
+											<td>Sp.TB.MDR</td>
+											<td>Tanggal 16 s/d 31
+											<td>*Tanggal praktek dokter berlaku untuk Vsbulan ini</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end TB.MDR -->
+
+					<!--  start fertility -->
+					<h2 class="accordion-header" id="flush-heading31">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse31" aria-expanded="false"
+							aria-controls="flush-collapse31">
+							SPESIALIS FERTILITY
+						</button>
+					</h2>
+					<div id="flush-collapse31" class="accordion-collapse collapse" aria-labelledby="flush-heading31"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Nicko Piscesky,Sp.OG,K</a>
+											</td>
+											<td>Sp.Fertility</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Imelda E.B.Hutagaul,Sp.OG</a>
+											</td>
+											<td>Sp.Fertility</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end fertility -->
+
+					<!-- start geriatri -->
+					<h2 class="accordion-header" id="flush-heading32">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse32" aria-expanded="false"
+							aria-controls="flush-collapse32">
+							SPESIALIS GERIATRI
+						</button>
+					</h2>
+					<div id="flush-collapse32" class="accordion-collapse collapse" aria-labelledby="flush-heading32"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.R.Merlinda
+													Veronica,M.Ked(PD),Sp.PD</a>
+											</td>
+											<td>Sp.Geriatri</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end geriatri -->
+
+					<!-- start gizi -->
+					<h2 class="accordion-header" id="flush-heading33">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse33" aria-expanded="false"
+							aria-controls="flush-collapse33">
+							SPESIALIS GIZI
+						</button>
+					</h2>
+					<div id="flush-collapse33" class="accordion-collapse collapse" aria-labelledby="flush-heading33"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">Retno Sari, S.Gz</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">Puji Lestari,SKM</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end gizi -->
+
+					<!-- start hemato onkologi dewasa -->
+					<h2 class="accordion-header" id="flush-heading35">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse35" aria-expanded="false"
+							aria-controls="flush-collapse35">
+							SPESIALIS HEMATO ONKOLOGI DEWASA
+						</button>
+					</h2>
+					<div id="flush-collapse35" class="accordion-collapse collapse" aria-labelledby="flush-heading35"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Marlina Tasril,Sp.PD-KHOM</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Yulistia Asmi,Sp.PD</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end hemato -->
+
+					<!-- start hemodialisa -->
+					<h2 class="accordion-header" id="flush-heading36">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse36" aria-expanded="false"
+							aria-controls="flush-collapse36">
+							SPESIALIS HEMODIALISA
+						</button>
+					</h2>
+					<div id="flush-collapse36" class="accordion-collapse collapse" aria-labelledby="flush-heading36"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Rayendra,Sp.Pd-KGH.FINASIM</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end hemodialisa -->
+
+					<!-- start okupasi -->
+					<h2 class="accordion-header" id="flush-heading37">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse37" aria-expanded="false"
+							aria-controls="flush-collapse37">
+							SPESIALIS KEDOKTERAN OKUPASI
+						</button>
+					</h2>
+					<div id="flush-collapse37" class="accordion-collapse collapse" aria-labelledby="flush-heading37"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Rayendra,Sp.Pd-KGH.FINASIM</a>
+											</td>
+											<td>Sp.Gizi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end okupasi -->
+
+					<!-- start onkologi ginekologi -->
+					<h2 class="accordion-header" id="flush-heading38">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse38" aria-expanded="false"
+							aria-controls="flush-collapse38">
+							SPESIALIS ONKOLOGI GINEKOLOGI
+						</button>
+					</h2>
+					<div id="flush-collapse38" class="accordion-collapse collapse" aria-labelledby="flush-heading38"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Ari Hidayat,Sp.OG</a>
+											</td>
+											<td>Sp.Onkologi Ginekologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end onkologi ginekologi -->
+
+					<!-- stat orthodontie -->
+					<h2 class="accordion-header" id="flush-heading39">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse39" aria-expanded="false"
+							aria-controls="flush-collapse38">
+							SPESIALIS ORTHODONTIE
+						</button>
+					</h2>
+					<div id="flush-collapse39" class="accordion-collapse collapse" aria-labelledby="flush-heading39"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">drg.Poetry Testya,Sp.Ort</a>
+											</td>
+											<td>Sp.Orthodontie</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end orthodontie -->
+
+					<!-- start radioterapi -->
+					<h2 class="accordion-header" id="flush-heading40">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse40" aria-expanded="false"
+							aria-controls="flush-collapse40">
+							SPESIALIS RADIOTERAPI
+						</button>
+					</h2>
+					<div id="flush-collapse40" class="accordion-collapse collapse" aria-labelledby="flush-heading40"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Riri Yuliasi,Sp.Onk.Rad</a>
+											</td>
+											<td>Sp.Radioterapi</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end radioterapi -->
+
+					<!-- start prosthodontie -->
+					<h2 class="accordion-header" id="flush-heading41">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse41" aria-expanded="false"
+							aria-controls="flush-collapse41">
+							SPESIALIS PROSTHODONTIE
+						</button>
+					</h2>
+					<div id="flush-collapse41" class="accordion-collapse collapse" aria-labelledby="flush-heading41"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Elita Rafni</a>
+											</td>
+											<td>Sp.Prosthodontie</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end prosthodontie -->
+
+					<!-- start rehab medik -->
+					<h2 class="accordion-header" id="flush-heading42">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse42" aria-expanded="false"
+							aria-controls="flush-collapse42">
+							SPESIALIS REHAB MEDIK
+						</button>
+					</h2>
+					<div id="flush-collapse42" class="accordion-collapse collapse" aria-labelledby="flush-heading42"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Tengku Misalia,Sp.KFR,M.Kes</a>
+											</td>
+											<td>Sp.Rehab Medik</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Churcil H.H Sitompul,Sp.RM</a>
+											</td>
+											<td>Sp.Rehab Medik</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end rehab medik -->
+
+					<!-- start thalasemia -->
+					<h2 class="accordion-header" id="flush-heading44">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse44" aria-expanded="false"
+							aria-controls="flush-collapse44">
+							SPESIALIS THALASEMIA
+						</button>
+					</h2>
+					<div id="flush-collapse44" class="accordion-collapse collapse" aria-labelledby="flush-heading44"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Elmi Ridar,Sp.A</a>
+											</td>
+											<td>Sp.Thalasemia</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Cece Alfallah,Sp.A (k)</a>
+											</td>
+											<td>Sp.Thalasemia</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Marlina Tasril,Sp.PD-KHOM</a>
+											</td>
+											<td>Sp.Thalasemia</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end thalasemia -->
+
+					<!-- start uroginekologi -->
+					<h2 class="accordion-header" id="flush-heading45">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse45" aria-expanded="false"
+							aria-controls="flush-collapse45">
+							SPESIALIS UROGINEKOLOGI
+						</button>
+					</h2>
+					<div id="flush-collapse45" class="accordion-collapse collapse" aria-labelledby="flush-heading45"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Eddy Fakhrizal,Sp.Og</a>
+											</td>
+											<td>Sp.Thalasemia</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Sri Wahyu,Sp.Og</a>
+											</td>
+											<td>Sp.Thalasemia</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end uroginekologi -->
+
+					<!-- start urologi -->
+					<h2 class="accordion-header" id="flush-heading46">
+						<button class="accordion-button collapsed warna-baris-spesialis" type="button"
+							data-bs-toggle="collapse" data-bs-target="#flush-collapse46" aria-expanded="false"
+							aria-controls="flush-collapse46">
+							SPESIALIS UROLOGI
+						</button>
+					</h2>
+					<div id="flush-collapse46" class="accordion-collapse collapse" aria-labelledby="flush-heading46"
+						data-bs-parent="#accordionFlushExample">
+						<div class="accordion-body">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered table-striped table-sm">
+									<thead class="warna-thead">
+										<th>DOKTER</th>
+										<th>SPESIALIS</th>
+										<th>SENIN</th>
+										<th>SELASA</th>
+										<th>RABU</th>
+										<th>KAMIS</th>
+										<th>JUM'AT</th>
+										<th>SABTU</th>
+									</thead>
+
+									<tbody class="warna-baris">
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Indra Jaya,Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">Dr.Dr.H.Afdal.,Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Muhammad Adan Yashar,Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">Dr.dr.Zuhirman,Sp.Uro</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+
+										<tr data-toggle="collapse" data-target="#accordion" class="clickable">
+											<td><a class="cek-dokter" href="#">dr.Joko Pitoyo,Sp.U</a>
+											</td>
+											<td>Sp.Urologi</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>OFF</td>
+											<td>07.00 - 11.00</td>
+											<td>OFF</td>
+											<td>OFF</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end urologi -->
+
+				</div>
+			</div>
+		</div>
+		<!-- end acordion -->
+	</section>
+
+	<br><br>
+
+	<!-- footer -->
+	<section id="footer">
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+
+						<!-- about rsud -->
+						<div class="logo-rsud">
+							<a class="logo-rsud" href="http://rsudarifinachmad.riau.go.id/">
+								<img src="Asset/img/favicon-rsud-aa-pku 1.png" alt="" width="50" height="50">
+								<a class="logo-rsud">RSUD ARIFIN ACHMAD</a>
+							</a>
+						</div>
+
+						<br>
+						<p>Rumah Sakit Umum Daerah Arifin Achmad Provinsi Riau merupakan Rumah Sakit Pendidikan
+							Mandiri dengan Pelayanan Paripurna yang Memenuhi Standar Internasional.</p>
+
+						<!-- kontak -->
+						<div class="kontak">
+							<h6>Kontak</h6>
+							<div>
+								<img src="Asset/img/map.png" alt="#">
+								<a href="https://www.google.com/maps/place/RSUD+ARIFIN+ACHMAD+PROVINSI+RIAU/@0.5232909,101.4497808,17z/data=!3m1!4b1!4m5!3m4!1s0x31d5ac1b96d2da05:0xa46f1a0f91188a1e!8m2!3d0.5232857!4d101.4519697?hl=en-US="
+									target="_blank">Jl.Diponegoro No.2 Pekanbaru-Riau</a>
+							</div>
+							<div>
+								<img src="Asset/img/phone.png" alt="#">
+								<a href="#" target="_blank">(0761) 21618 (0761) 21657 (0761)
+									855702 (0761) 23418</a>
+							</div>
+							<div>
+								<img src="Asset/img/email.png" alt="#">
+								<a href="mailto:rsudarifinachmad@riau.go.id"
+									target="_blank">rsudarifinachmad@riau.go.id</a>
+							</div>
+
+							<h6>Social Media</h6>
+							<div>
+								<div>
+									<img src="Asset/img/fb.png">
+									<a href="https://www.facebook.com/profile.php?id=100014530207726"
+										target="_blank">rsudarifinachmad</a>
+								</div>
+								<div>
+									<img src="Asset/img/ig.png">
+									<a class="logo-sosmed-footer" href="https://www.instagram.com/rsud_arifinachmad/"
+										target="_blank">rsudarifinachmad</a>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+
+					<!-- card pertanyaan -->
+					<div class="col-md-6">
+						<div class="card-contact w-100">
+							<h2>Ada Pertanyaan?</h2>
+							<div class="form-floating mb-3">
+								<button type="submit" class="button-lokasi1">
+									<img src="Asset/img/map.png">
+									<a href="https://www.google.com/maps/place/RSUD+ARIFIN+ACHMAD+PROVINSI+RIAU/@0.5232909,101.4497808,17z/data=!3m1!4b1!4m5!3m4!1s0x31d5ac1b96d2da05:0xa46f1a0f91188a1e!8m2!3d0.5232857!4d101.4519697?hl=en-US="
+										target="_blank">
+										Temukan Lokasi RSUD
+									</a>
+								</button>
+							</div>
+
+							<div class="form-floating mb-3">
+								<button type="submit" class="button-lokasi2">
+									<img src="Asset/img/email.png">
+									<a href="mailto:kontak@rsudarifinachmad.riau.go.id" target="_blank">
+										Sampaikan Saran
+									</a>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- end card pertanyaan -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- endfooter -->
+
+	<!-- start copyright -->
+	<footer class="d-flex align-items-center">
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<!-- copyright -->
+					<div class="col-md-8">
+						<a href="http://rsudarifinachmad.riau.go.id/">©2023 Rumah Sakit Umum Daerah Arifin Achmad
+							Provinsi Riau. All rights reserved.</a>
+					</div>
+					<!-- end copyright -->
+
+					<!-- hyperlink -->
+					<div class="col-md-4 d-flex justify-content-evenly">
+						<a href="http://rsudarifinachmad.riau.go.id/" target="_blank">Privacy</a>
+						<a href="http://rsudarifinachmad.riau.go.id/" target="_blank">Terms</a>
+						<a href="http://rsudarifinachmad.riau.go.id/" target="_blank">Sitemap</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- copyright -->
+
+	<!-- Optional JavaScript; choose one of the 2! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

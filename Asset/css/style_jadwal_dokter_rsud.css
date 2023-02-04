@@ -1,0 +1,327 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+/* navbar section */
+.dropdown .dropdown-menu {
+  display: none;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+@media screen and (min-width: 769px) {
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
+
+.navbar {
+  z-index: 3;
+}
+
+* {
+  z-index: 2;
+}
+
+.nav-item {
+  font-size: 13px;
+}
+
+/* .nav-link {
+	color: #666666;
+} */
+
+.navbar-light .navbar-nav .nav-link {
+  color: #666666;
+}
+
+.nav-link:hover {
+  color: #000000;
+}
+
+.dropdown-item {
+  font-size: 13px;
+  color: #666666;
+}
+
+.dropdown-item:hover {
+  color: #000000;
+}
+
+.navbar-light .navbar-brand {
+  font-weight: 700;
+  color: #008238;
+}
+.navbar-brand:hover {
+  color: #000000;
+}
+
+/* hero section */
+#hero {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/bg-rsud.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-hero {
+  z-index: 1;
+  height: 100%;
+}
+
+.hero-tagline {
+  margin-top: 160px;
+  margin-bottom: 140px;
+}
+
+.hero-tagline h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 72px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 50%);
+}
+
+.hero-tagline p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 85%;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 50%);
+}
+
+.button-lg-primary {
+  width: 262px;
+  height: 66px;
+  background-color: #008238;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.button-lg-primary a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-lg-primary:hover {
+  width: 262px;
+  height: 66px;
+  background-color: #000000;
+  color: rgb(243, 243, 243);
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* jadwal dokter */
+.row h2 {
+  font-size: 32px;
+  color: #008238;
+  font-weight: 700;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: rgb(3, 3, 3);
+  font-weight: medium;
+}
+
+/* accordion */
+.warna-thead {
+  background-color: #008238;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.warna-baris {
+  color: #000;
+  font-size: 14px;
+}
+
+.warna-baris-spesialis {
+  background-color: #f5f5f5;
+  color: rgb(0, 255, 64);
+  font-weight: 700;
+}
+
+.warna-baris-spesialis:hover {
+  background-color: #ffffff;
+  color: #008238;
+  font-weight: 700;
+}
+
+.accordion-button {
+  color: #008238;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000000;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 0 0.25rem rgba(109, 155, 131, 0.25);
+}
+
+.cek-dokter {
+  text-decoration: none;
+  font-weight: 700;
+  color: #008238;
+}
+
+.cek-dokter:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
+
+.button-accordion-button {
+  color: #000;
+}
+
+.button-accordion-button:hover {
+  color: rgb(189, 180, 180);
+}
+
+/* td {
+	text-align: center;
+} */
+
+/* footer */
+#footer {
+  background-color: #2e3033;
+  margin-top: 50px;
+  padding: 80px 0 80px;
+}
+
+.logo-rsud a {
+  font-weight: 700;
+  font-size: 30px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: justify;
+  margin-right: 30px;
+}
+
+.kontak h6 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 19px 0 14px 0;
+}
+
+.kontak a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #bac0c5;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.card-contact {
+  width: 90%;
+  height: 336;
+  background: #fefefe;
+  border-radius: 5px;
+  padding: 52px 48px;
+}
+
+.card-contact h2 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.button-lokasi1 {
+  background: #7cba3d;
+  width: 100%;
+  height: 100px;
+  border: none;
+}
+
+.button-lokasi1:hover {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100px;
+  border: none;
+}
+
+.button-lokasi2 {
+  background: #43a140;
+  width: 100%;
+  height: 100px;
+  border: none;
+}
+
+.button-lokasi2:hover {
+  background: #2e3033;
+  width: 100%;
+  height: 100px;
+  border: none;
+}
+
+.button-lokasi1 a,
+.button-lokasi2 a {
+  font-size: 19px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 16px;
+  text-align: left;
+  font-weight: 400;
+}
+
+footer {
+  width: 100%;
+  height: 79px;
+  background: #151515;
+}
+
+footer a {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: rgb(180, 174, 174);
+  text-decoration: none;
+}
